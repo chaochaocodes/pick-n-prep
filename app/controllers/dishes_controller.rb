@@ -1,4 +1,5 @@
 class DishesController < ApplicationController
+    before_action :check_user
     before_action :find_dish, only: [:show, :edit, :update, :destroy]
 
     def index

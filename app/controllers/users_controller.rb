@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     # before_action :check_user
-    before_action :find_user, only: [:show, :edit, :update]
+    before_action :find_user, only: [:show, :edit, :update, :destroy]
 
     def new
         @user = User.new
@@ -25,6 +25,15 @@ class UsersController < ApplicationController
         else 
             render :edit
         end
+    end
+    
+    def destroy
+        @user = User.find(params[:id])
+        # byebug
+        if @user == @current_user
+            @user.destroy_all
+        end 
+        redirect_to logout_path
     end
 
     private

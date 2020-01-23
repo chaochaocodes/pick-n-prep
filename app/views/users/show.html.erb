@@ -1,8 +1,9 @@
 <h1> User Profile </h1>
 
-Name: <br><%= @user.name%><br>
-Upcoming Trips: <br><%= @user.trip%><br>
-Dietary Restriction: <br><%= @user.dietary_restriction%><br>
+Name: <br><%= @user.name%><br><br>
+Upcoming Trips: <br><%= @user.trip%><br><br>
+Dietary Restriction: <br><%= @user.dietary_restriction%><br><br>
 
 <%= button_to "edit profile", edit_user_path, method: :get%>
+<%= button_to "delete account", logout_path , method: :get%>
 <%= %>
