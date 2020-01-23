@@ -1,0 +1,12 @@
+<h1> EDITTT Profile </h1>
+<%= form_for @user do |f| %>
+
+    Name: <br> 
+    <%= f.text_field :name %><br>
+    Add any upcoming trips: <br>
+    <%= f.text_field :trip %><br><br>
+    <%= f.label :dietary_restriction %><br>
+    <%= f.text_field :dietary_restriction %><br><br>
+
+    <%= f.submit "Update Profile"%>
+<% end %>

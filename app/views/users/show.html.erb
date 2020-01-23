@@ -1,0 +1,8 @@
+<h1> User Profile </h1>
+
+Name: <br><%= @user.name%><br>
+Upcoming Trips: <br><%= @user.trip%><br>
+Dietary Restriction: <br><%= @user.dietary_restriction%><br>
+
+<%= button_to "edit profile", edit_user_path, method: :get%>
+<%= %>

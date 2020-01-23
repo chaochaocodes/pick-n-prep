@@ -1,0 +1,14 @@
+<%if flash[:message] %>
+<%= flash[:message] %>
+<%end %>
+
+<%= form_for @user do |f| %><br>
+    <%= f.label :name %><br>
+    <%= f.text_field :name, class: "new-todo" , placeholder: "Please enter your name." %><br><br>
+    <%= f.label :password %><br>
+    <%= f.password_field :password, class: "new-todo", placeholder: "Choose a Password." %><br><br>
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation, class: "new-todo", placeholder: "Please Confirm Your Password." %><br><br>
+    <%= f.submit %><br><br>
+<% end %>
+
