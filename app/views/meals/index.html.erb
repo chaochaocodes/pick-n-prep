@@ -1,0 +1,5 @@
+<h1> Find a Recipe for: </h1>
+
+<% @meals.each do |meal| %>
+    <%= link_to meal.meal_type, meal  %><br>
+<% end %>

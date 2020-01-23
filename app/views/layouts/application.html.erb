@@ -11,5 +11,14 @@
 
   <body>
     <%= yield %>
+    <% if current_user %>
+    <%= link_to "Profile", user_path(current_user) %>
+    <% end %>
+    <%= link_to "Cuisines", cuisines_path %>
+    <%= link_to "Recipe Index", dishes_path %>
+    <%= link_to "Meal Type", meals_path %>
+    <% if logged_in? %>
+    <%= link_to "Log out", logout_path %>
+    <% end %>
   </body>
 </html>
