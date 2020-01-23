@@ -1,7 +1,7 @@
 //bootstrap dependences: 
-require jquery3
-require popper
-require bootstrap-sprockets
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 
 
 // This file is automatically compiled by Webpack, along with any other files

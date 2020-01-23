@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
     def current_user
         @current_user ||= User.find(session[:user_id]) if session[:user_id] 
+        puts "current user = #{@current_user}"
     end
       
     def check_user
