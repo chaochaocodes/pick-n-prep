@@ -23,14 +23,12 @@ ActiveRecord::Schema.define(version: 2020_01_23_025725) do
     t.string "ingredient"
     t.integer "cuisine_id"
     t.integer "meal_id"
-    t.string "ease"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "meals", force: :cascade do |t|
     t.string "meal_type"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

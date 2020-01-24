@@ -1,6 +1,4 @@
 class MealsController < ApplicationController
-    before_action :check_user
-
     def index
         @meals = Meal.all
     end

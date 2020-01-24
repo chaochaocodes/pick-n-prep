@@ -4,20 +4,17 @@ class AuthController < ApplicationController
 
     def authenticate #create
         user = User.find_by(name: params[:auth][:name])
-        byebug
         if user && user.authenticate(params[:auth][:password])
             session[:user_id] = user.id.to_s
-            byebug
             redirect_to '/'
         else 
-            flash[:message] = "Incorrect Information"
+            flash[:message] = "User name or password is incorrect. Try again."
             render :login
         end
     end
 
     def logout #destroy
-        byebug
         session.clear
-        redirect_to login_path
+        redirect_to signup_path
     end
 end

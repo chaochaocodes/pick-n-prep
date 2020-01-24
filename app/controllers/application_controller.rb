@@ -3,18 +3,16 @@ class ApplicationController < ActionController::Base
 
     def current_user
         @current_user ||= User.find(session[:user_id]) if session[:user_id] 
-        puts "current user = #{@current_user}"
     end
       
     def check_user
         if !logged_in?
-        redirect_to login_path
+        redirect_to signup_path
         end
     end
 
     def logged_in?
         !!current_user
-        # !!cookies[:user_id]
     end
 end
 

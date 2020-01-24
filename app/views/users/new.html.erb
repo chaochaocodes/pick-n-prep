@@ -2,6 +2,8 @@
 <%= flash[:message] %>
 <%end %>
 
+<h1> Create an Account </h1>
+
 <%= form_for @user do |f| %><br>
     <%= f.label :name %><br>
     <%= f.text_field :name, class: "new-todo" , placeholder: "Enter your name here." %><br><br>
@@ -9,6 +11,6 @@
     <%= f.password_field :password, class: "new-todo", placeholder: "Choose a Password." %><br><br>
     <%= f.label :password_confirmation %><br>
     <%= f.password_field :password_confirmation, class: "new-todo", placeholder: "Confirm Password." %><br><br>
-    <%= f.submit %><br><br>
+    <%= f.submit %> &nbsp; or &nbsp;
+    <%= button_to "Go to Login", login_path, method: :get%>
 <% end %>
-

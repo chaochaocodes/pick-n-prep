@@ -1,8 +1,14 @@
-<h1> Edit Profile </h1>
+<h1> Edit Profile </h1><br>
 <%= form_for @user do |f| %>
 
+    <label for="avatar">Choose a profile picture:</label><br>
+
+    <input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg"><br><br>
+
     Name: <br> 
-    <%= f.text_field :name %><br>
+    <%= f.text_field :name %><br><br>
     Add any upcoming trips: <br>
     <%= f.text_field :trip %><br><br>
     <%= f.label :dietary_restriction %><br>
