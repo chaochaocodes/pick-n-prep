@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   resources :meals, only: [:index, :show]
   resources :users
     
-  # root "cuisines#index"
-  root "auth#landing"
+  root "meals#index"
+  # root "auth#landing"
+  get '/landing', to: "auth#landing", as: "landing"
   get '/signup', to: "users#new", as: "signup"
   get '/login', to: "auth#login", as: "login" #auth#new
   post '/login', to: "auth#authenticate"  #auth#create

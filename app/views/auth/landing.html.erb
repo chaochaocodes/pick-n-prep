@@ -6,6 +6,10 @@
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+ 
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Welcome to MealPik. </a>
+  </nav>
 
 <%# <style>
 .rotateimg90 {
@@ -16,22 +20,21 @@
   transform: rotate(90deg);
 }
 </style> %>
+</head>
 
 <!-- Jumbotron -->
-<div class="jumbotron p-0">
+<%# <div class="jumbotron p-2"> %>
 
   <!-- Card image -->
-  <div class="view overlay rounded-top">
-    <img src="https://images.unsplash.com/photo-1546548970-71785318a17b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="rotateimg90" class="img-fluid">
-
+  <%# <div class="view overlay rounded-top"> %>
     <%# <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(134).jpg" class="img-fluid" alt="Sample image"> %>
-    <a href="#">
-      <div class="mask rgba-white-slight"></div>
-    </a>
-  </div>
+    <%# <a href="#"> %>
+      <%# <div class="mask rgba-white-slight"></div> %>
+    <%# </a>
+  </div> %>
 
   <!-- Card content -->
-  <div class="card-body text-center mb-3">
+  <div class="card-body text-center mb-1">
 
     <!-- Title -->
     <h3 class="card-title h3 my-4"><strong>MealPik</strong></h3>
@@ -43,8 +46,9 @@
     &nbsp; or &nbsp;
     <%= link_to "View Recipes", meals_path, method: :get, class: "btn btn-info" %>
   </div>
-
 </div>
 <!-- Jumbotron -->
-</head>
+
+<img src="https://images.unsplash.com/photo-1546548970-71785318a17b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80" class="img-fluid" >
+
 </html>

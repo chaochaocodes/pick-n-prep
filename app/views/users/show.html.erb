@@ -1,4 +1,8 @@
-<br><h2> User Profile </h2>
+<h2> User Profile </h2>
+
+<%# <%= if @user.avatar.attached? %>
+ <%# < image src="<%=(url_for(@user.avatar))%>
+<%# <% end %> 
 
 User Name: <br><%= @user.name%><br><br>
 Upcoming Trips: <br><%= @user.trip%><br><br>

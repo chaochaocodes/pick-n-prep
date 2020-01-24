@@ -1,13 +1,14 @@
-<h2> Edit Profile </h2><br>
+<h2> Edit Profile </h2>
+
+<%# <%= form_with model: @user do |f| %>
+  <%# <%= f.file_field :picture %>
+<%# <% end %>
+
 <%= form_for @user do |f| %>
 
-    <%# <label for="avatar">Choose a profile picture:</label><br>
-    <input type="file"
-       id="avatar" name="avatar"
-       accept="image/png, image/jpeg"><br><br> %>
-
-    Name: <br> 
-    <%= f.text_field :name %><br><br>
+    <%# <%= f.label "Upload Profile Photo" %>
+    <%# <%= f.field_field :avatar %>
+    Name: <br> <%= f.text_field :name %><br><br>
     Add any upcoming trips: <br>
     <%= f.text_field :trip %><br><br>
     <%= f.label :dietary_restriction %><br>

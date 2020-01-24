@@ -8,7 +8,7 @@
     <h5 class="card-title"><%= @dish.name %></h5>
     <h6 class="card-subtitle mb-2 text-muted"><%= @dish.cuisine.name %></h6>
     <p class="card-text"><%= @dish.ingredient %></p>
-    <%= link_to "Cuisine", cuisine_path, method: :get, class: "card-link" %>
-    <%= link_to "Meal", meal_path, method: :get, class: "card-link" %>
+    <a href="javascript:history.back()">Go Back</a>
   </div>
 </div>
+

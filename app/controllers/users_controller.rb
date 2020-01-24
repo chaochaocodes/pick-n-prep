@@ -1,8 +1,20 @@
 class UsersController < ApplicationController
     before_action :find_user, only: [:show, :edit, :update, :destroy]
 
+    # @user.avatar.attach(params[:avatar]
+    # def upload
+    #     uploaded_file = params[:user][:picture]
+    #     File.open(Rails.root.join('public', 'uploads', uploaded_file.original_filename), 'wb') do |file|
+    #       file.write(uploaded_file.read)
+    #     end
+    # end
+
     def new
         @user = User.new
+    end
+
+    def show
+        # render :layout => "format"
     end
 
     def create
@@ -39,7 +51,7 @@ class UsersController < ApplicationController
     end
 
     def profile_params
-        params.require(:user).permit(:name, :password, :trip, :dietary_restriction)
+        params.require(:user).permit(:name, :password, :trip, :dietary_restriction, :avatar)
     end
 
     def find_user

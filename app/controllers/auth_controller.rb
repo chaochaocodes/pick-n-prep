@@ -2,7 +2,7 @@ class AuthController < ApplicationController
     def login #new 
     end
 
-    def landing #jumbotron root
+    def landing #show
         render :layout => false
     end
 

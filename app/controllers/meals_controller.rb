@@ -1,5 +1,6 @@
 class MealsController < ApplicationController
     def index
+        render :layout => "format"
         @meals = Meal.all
     end
 
