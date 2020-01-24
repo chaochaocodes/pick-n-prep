@@ -1,9 +1,10 @@
-<h1> User Profile </h1>
+<br><h2> User Profile </h2>
 
-Name: <br><%= @user.name%><br><br>
+User Name: <br><%= @user.name%><br><br>
 Upcoming Trips: <br><%= @user.trip%><br><br>
-Dietary Restriction: <br><%= @user.dietary_restriction%><br><br>
+Dietary Restrictions: <br><%= @user.dietary_restriction%><br><br>
 
-<%= button_to "Edit Profile", edit_user_path, method: :get%> 
-&nbsp; &nbsp; &nbsp; &nbsp; or
-<%= button_to "Delete Account", user_path(current_user) , method: :delete%>
+
+<%= button_to "Edit Profile", edit_user_path, method: :get, form: {style: 'display:inline-block;'}%> 
+&nbsp; or &nbsp;
+<%= button_to "Delete Account", user_path(current_user) , method: :delete, form: {style: 'display:inline-block;'}%>

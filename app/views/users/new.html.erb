@@ -2,7 +2,7 @@
 <%= flash[:message] %>
 <%end %>
 
-<h1> Create an Account </h1>
+<h2> Create an Account </h2>
 
 <%= form_for @user do |f| %><br>
     <%= f.label :name %><br>
@@ -14,3 +14,4 @@
     <%= f.submit %> &nbsp; or &nbsp;
     <%= button_to "Go to Login", login_path, method: :get%>
 <% end %>
+

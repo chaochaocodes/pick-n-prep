@@ -10,7 +10,6 @@ class DishesController < ApplicationController
     end
 
     def create
-        # byebug
         @dish = Dish.create(dish_params)
         if @dish.save
             redirect_to dishes_path

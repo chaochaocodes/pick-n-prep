@@ -1,11 +1,10 @@
-<h1> Edit Profile </h1><br>
+<h2> Edit Profile </h2><br>
 <%= form_for @user do |f| %>
 
-    <label for="avatar">Choose a profile picture:</label><br>
-
+    <%# <label for="avatar">Choose a profile picture:</label><br>
     <input type="file"
        id="avatar" name="avatar"
-       accept="image/png, image/jpeg"><br><br>
+       accept="image/png, image/jpeg"><br><br> %>
 
     Name: <br> 
     <%= f.text_field :name %><br><br>

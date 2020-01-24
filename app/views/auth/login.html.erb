@@ -2,13 +2,15 @@
 <%= flash[:message] %>
 <%end %>
 
-<h1> Please Login </h1>
-<%= form_for :auth, url: login_path do |f| %><br>
-    <%= f.label :name %><br><br>
-    <%= f.text_field :name, class: "new-todo" , placeholder: "Login with your name" %><br><br>
-    <%= f.label :password %><br><br>
-    <%= f.password_field :password, class: "new-todo", placeholder: "and password." %><br><br>
-    <%= f.submit "Login" %>
-<% end %>
+<div>
+    <h2> Please Login </h2>
+    <%= form_for :auth, url: login_path do |f| %><br>
+        <%= f.label :name %><br><br>
+        <%= f.text_field :name, class: "new-todo" , placeholder: "Login with your name" %><br><br>
+        <%= f.label :password %><br><br>
+        <%= f.password_field :password, class: "new-todo", placeholder: "and password." %><br><br>
+        <%= button_to "Login", meals_path, method: :get %>
+    <% end %>
+</div>
 
 <%# <%= button_to "Create Account", signup_path, method: :get %>

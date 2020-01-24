@@ -1,20 +1,16 @@
 <!DOCTYPE html>
-
-<%# <div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
-  <div class="text-white text-center py-5 px-4">
-    <div>
-      <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Welcome to MealPik</strong></h2>
-      <p class="mx-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
-        optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos. Odit sed qui, dolorum!
-      </p>
-      <a class="btn btn-outline-white btn-md"><i class="fas fa-clone left"></i> View project</a>
-    </div>
-  </div>
-</div> %>
-
-
 <html>
   <head>
+    <%# <style>
+    body {
+      background: ;
+    }
+    .content {
+      text-align: center;
+      vertical-align: middle;
+    }
+    </style> %>
+
     <title>PickNPrep</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -22,37 +18,32 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   
-  
 <nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="/">Welcome to MealPik! </a>
-</nav>
+  <a class="navbar-brand" href="/">Welcome to MealPik. </a>
+</nav><br>
 
-  <br>
   <div class="container">
     <div class="row">
+        <div class="col-md-3"></div>
         <div class="col">
         <% if current_user %>
           <%= link_to "Profile", user_path(current_user), method: :get, class: 'btn btn-dark'%>
         <% end %>
+        <%= link_to "Find by Meal", meals_path, method: :get, class: "btn btn-info" %>
+        <%= link_to "Cuisines", cuisines_path, method: :get, class: "btn btn-info" %>
+        <%= link_to "Recipes", dishes_path, method: :get, class: "btn btn-info" %>
         <% if logged_in? %>
-          <%= link_to "Cuisines", cuisines_path, method: :get, class: "btn btn-info" %>
-          <%= link_to "Recipes", dishes_path, method: :get, class: "btn btn-info" %>
-          <%= link_to "Find by Meal", meals_path, method: :get, class: "btn btn-info" %>
-          <%= link_to "Add a Recipe!", new_dish_path, method: :get, class: "btn btn-light" %>
+          <%= link_to "Add a Recipe", new_dish_path, method: :get, class: "btn btn-light" %>
           <%= link_to "Logout", logout_path, method: :get, class: "btn btn-secondary" %> 
-          <% end %>
+        <% end %>
+        <div class="col-md-3"></div>
     </div>
-</div>
-<br>
+  </div>
 </head>
 
   <body>
+    <div>
     <%= yield %>
-    <%# <% if logged_in? %>
-    <%# <%= link_to "Log out", logout_path %>
-    <%# <% end %>
-
-
+    </div>
   </body>
 </html>
-
