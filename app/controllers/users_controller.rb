@@ -21,7 +21,8 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if params[:user][:password] == params[:user][:password_confirmation]
             @user.password = params[:user][:password]
-            @user.save
+        end
+        if @user.save
             flash[:message] = nil
             redirect_to login_path
         else

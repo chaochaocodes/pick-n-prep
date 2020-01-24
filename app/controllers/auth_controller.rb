@@ -1,5 +1,6 @@
 class AuthController < ApplicationController
     def login #new 
+        
     end
 
     def landing #show
