@@ -5,18 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Cuisine.create(name: "Indian")
-Cuisine.create(name: "Japanese")
+
+japanese = Cuisine.create(name: "Japanese")
 italian = Cuisine.create(name: "Italian")
-meal = Meal.create(meal_type: "Breakfast")
+american = Cuisine.create(name: "American")
+indian = Cuisine.create(name: "Indian")
+
+breakfast = Meal.create(meal_type: "Breakfast")
 lunch = Meal.create(meal_type: "Lunch")
 dinner = Meal.create(meal_type: "Dinner")
-Dish.create(name: "Spaghetti & Meatballs", ingredient: "Pasta", cuisine_id: italian.id, meal_id: dinner.id, ease: "Easy")
+dessert = Meal.create(meal_type: "Dessert")
 
-
-# User.create(name: "Alicia", trip: "Park City", dietary_restriction: "Lactose")
-# User.create(name: "Karen", trip: "Niseko", dietary_restriction: "GF")
-
-# "password_digest"
+Dish.create(name: "Spaghetti & Meatballs", ingredient: "Pasta", cuisine_id: italian.id, meal_id: dinner.id)
+Dish.create(name: "Sushi", ingredient: "Rice, Salmon", cuisine_id: japanese.id, meal_id: lunch.id)
+Dish.create(name: "Butter Chicken", ingredient: "Chicken", cuisine_id: indian.id, meal_id: dinner.id)
+Dish.create(name: "Pancakes", ingredient: "pancake batter", cuisine_id: american.id, meal_id: breakfast.id)
+Dish.create(name: "Chocolate Lava Cake", ingredient: "cocoa powder", cuisine_id: american.id, meal_id: dessert.id)
 
 puts  "seed complete"

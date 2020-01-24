@@ -1,5 +1,4 @@
 class DishesController < ApplicationController
-    before_action :check_user
     before_action :find_dish, only: [:show, :edit, :update, :destroy]
 
     def index
@@ -11,11 +10,12 @@ class DishesController < ApplicationController
     end
 
     def create
-        @dish = Dish.new(dish_params)
+        # byebug
+        @dish = Dish.create(dish_params)
         if @dish.save
-            redirect_to dish
+            redirect_to dishes_path
         else
-            render :new 
+            render :new
         end
     end
 
@@ -37,6 +37,6 @@ class DishesController < ApplicationController
     end
 
     def dish_params
-        params.require(:dish).permit(:name, :ingredient, :cuisine_id, :meal_id, :ease)
+        params.require(:dish).permit(:name, :ingredient, :cuisine_id, :meal_id)
     end
 end

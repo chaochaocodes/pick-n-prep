@@ -1,4 +1,18 @@
 <!DOCTYPE html>
+
+<%# <div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+  <div class="text-white text-center py-5 px-4">
+    <div>
+      <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Welcome to MealPik</strong></h2>
+      <p class="mx-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
+        optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos. Odit sed qui, dolorum!
+      </p>
+      <a class="btn btn-outline-white btn-md"><i class="fas fa-clone left"></i> View project</a>
+    </div>
+  </div>
+</div> %>
+
+
 <html>
   <head>
     <title>PickNPrep</title>
@@ -8,16 +22,25 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   
+  
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Welcome to MealPik! </a>
+</nav>
+
   <br>
   <div class="container">
     <div class="row">
         <div class="col">
-        <a class="btn btn-dark" href='/users/1' role="button">Profile</a>
-        <a class="btn btn-info" href='/cuisines' role="button">Cuisines</a>
-        <a class="btn btn-info" href='/dishes' role="button">Recipes</a>
-        <a class="btn btn-info" href='/meals' role="button">Find by Meal</a>
-        <a class="btn btn-secondary" href='/logout' role="button">Logout</a>
-        </button>
+        <% if current_user %>
+          <%= link_to "Profile", user_path(current_user), method: :get, class: 'btn btn-dark'%>
+        <% end %>
+        <% if logged_in? %>
+          <%= link_to "Cuisines", cuisines_path, method: :get, class: "btn btn-info" %>
+          <%= link_to "Recipes", dishes_path, method: :get, class: "btn btn-info" %>
+          <%= link_to "Find by Meal", meals_path, method: :get, class: "btn btn-info" %>
+          <%= link_to "Add a Recipe!", new_dish_path, method: :get, class: "btn btn-light" %>
+          <%= link_to "Logout", logout_path, method: :get, class: "btn btn-secondary" %> 
+          <% end %>
     </div>
 </div>
 <br>
@@ -25,17 +48,11 @@
 
   <body>
     <%= yield %>
+    <%# <% if logged_in? %>
+    <%# <%= link_to "Log out", logout_path %>
+    <%# <% end %>
 
-        <% if current_user %>
-        <%= link_to "Profile", user_path(current_user) %>
-        <% end %>
 
   </body>
 </html>
 
-    <% if current_user %>
-    <%= link_to "Profile", user_path(current_user) %>
-    <% end %>
-    <%# <% if logged_in? %>
-    <%# <%= link_to "Log out", logout_path %>
-    <%# <% end %>

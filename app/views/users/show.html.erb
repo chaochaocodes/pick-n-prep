@@ -4,6 +4,6 @@ Name: <br><%= @user.name%><br><br>
 Upcoming Trips: <br><%= @user.trip%><br><br>
 Dietary Restriction: <br><%= @user.dietary_restriction%><br><br>
 
-<%= button_to "edit profile", edit_user_path, method: :get%>
-<%= button_to "delete account", logout_path , method: :get%>
-<%= %>
+<%= button_to "Edit Profile", edit_user_path, method: :get%> 
+&nbsp; &nbsp; &nbsp; &nbsp; or
+<%= button_to "Delete Account", user_path(current_user) , method: :delete%>

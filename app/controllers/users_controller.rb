@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-    # before_action :check_user
     before_action :find_user, only: [:show, :edit, :update, :destroy]
 
     def new
@@ -28,8 +27,6 @@ class UsersController < ApplicationController
     end
     
     def destroy
-        @user = User.find(params[:id])
-        # byebug
         if @user == @current_user
             @user.destroy_all
         end 
