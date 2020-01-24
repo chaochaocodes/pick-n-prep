@@ -1,5 +1,6 @@
 class CuisinesController < ApplicationController
     def index
+        render :layout => "format"
         @cuisines = Cuisine.all
     end
 
