@@ -1,5 +1,30 @@
-<h1> Recipe Index </h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    body {
+      background: ;
+    }
+    .content {
+        max-width: 500px;
+        margin: auto;
+      text-align: center;
+      vertical-align: middle;
+    }
+    </style>
+  </head>
+  <body>
+    <div class ="content"><br>
+    <h2> Recipe Index </h2>
+        <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+            <% @dishes.each do |dish| %>
+            <li class="list-group-item"><%= link_to dish.name, dish_path(dish.id) %></li>
+            <% end %>
+        </ul>
+        </div>
+    </div>
+  </body>
+</html>
 
-<% @dishes.each do |dish| %>
-    <%= link_to dish.name, dish_path(dish.id) %><br>
-<% end %> 
+<%# Stressed is Desserts spelt backwards! %>

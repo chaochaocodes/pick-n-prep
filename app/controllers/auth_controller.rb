@@ -2,6 +2,10 @@ class AuthController < ApplicationController
     def login #new 
     end
 
+    def landing #jumbotron root
+        render :layout => false
+    end
+
     def authenticate #create
         user = User.find_by(name: params[:auth][:name])
         if user && user.authenticate(params[:auth][:password])

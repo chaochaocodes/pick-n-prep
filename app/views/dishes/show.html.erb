@@ -1,5 +1,14 @@
-<h1> Recipe </h1>
+<h2> Recipe </h2>
+<%# Name: <%= @dish.name %>
+<%# Cuisine: <%= @dish.cuisine.name %>
+<%# Ingredients: <%= @dish.ingredient link back to cuisine and meal! %>
 
-Name: <%= @dish.name %><br>
-Cuisine: <%= @dish.cuisine.name %><br>
-Ingredients: <%= @dish.ingredient %><br>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @dish.name %></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%= @dish.cuisine.name %></h6>
+    <p class="card-text"><%= @dish.ingredient %></p>
+    <%= link_to "Cuisine", cuisine_path, method: :get, class: "card-link" %>
+    <%= link_to "Meal", meal_path, method: :get, class: "card-link" %>
+  </div>
+</div>

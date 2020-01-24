@@ -1,7 +1,60 @@
-<h1> What Are You in the Mood For? </h1>
+<%# <h1> What Are You in the Mood For? </h1> %>
+<%# <% @cuisines.each do |cuisine| %>
+    <%# <%= link_to cuisine.name, cuisine_path(cuisine.id) %>
+<%# <% end %>
 
-<% @cuisines.each do |cuisine| %>
-    <%= link_to cuisine.name, cuisine_path(cuisine.id) %><br>
-<% end %>
+<p>
+<div class="row">
+  <div class="card" style="width: 22rem; ">
+  <img class="card-img-top" src="https://images.unsplash.com/photo-1516684732162-798a0062be99?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Chinese</h5>
+      <p class="card-text">慢慢吃！</p>
+      <a href="/cuisines/1" class="btn btn-secondary">慢慢吃！</a></a>
+    </div>
+  </div>  &nbsp;&nbsp;&nbsp;
 
+  <div class="card" style="width: 22rem;">
+  <img class="card-img-top" src="https://images.unsplash.com/photo-1566950616521-335084348663?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Japanese</h5>
+      <p class="card-text">どうぞめしあがれ</p>
+      <a href="/cuisines/2" class="btn btn-secondary">Go to Japanese Dishes</a></a>
+    </div>
+  </div>  &nbsp;&nbsp;&nbsp;
 
+  <div class="card" style="width: 22rem;">
+  <img class="card-img-top" src="https://images.unsplash.com/photo-1543376798-62217a8d85cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Indian</h5>
+      <p class="card-text">स्वादिष्ट खाना</p>
+      <a href="/cuisines/3" class="btn btn-secondary">Go to Indian Dishes</a></a>
+    </div>
+  </div> &nbsp;&nbsp;&nbsp;
+
+  <div class="card" style="width: 22rem;">
+  <img class="card-img-top" src="https://images.unsplash.com/photo-1536510344784-b43e97721c1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">American</h5>
+      <p class="card-text">Enjoy!</p>
+      <a href="/cuisines/4" class="btn btn-secondary">Go to American Dishes</a></a>
+    </div>
+  </div> &nbsp;&nbsp;&nbsp;
+
+  <div class="card" style="width: 22rem;">
+  <img class="card-img-top" src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Italian</h5>
+      <p class="card-text">Buon appetito!</p>
+      <a href="/cuisines/5" class="btn btn-secondary">Go to Italian Dishes</a></a>
+    </div>
+  </div> &nbsp;&nbsp;&nbsp;
+
+  <div class="card" style="width: 22rem;">
+  <img class="card-img-top" src="https://images.unsplash.com/photo-1557667676-7c99c2990610?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">French</h5>
+      <p class="card-text">Bon appétit!</p>
+      <a href="/cuisines/6" class="btn btn-secondary">Bon appétit!</a></a>
+    </div>
+  </div> &nbsp;&nbsp;&nbsp;
