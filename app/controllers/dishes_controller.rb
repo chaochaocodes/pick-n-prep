@@ -20,7 +20,7 @@ class DishesController < ApplicationController
 
     def update
         if @dish.update(dish_params)
-            redirect_to dish
+            redirect_to @dish
         else 
             render :edit
         end
@@ -28,6 +28,7 @@ class DishesController < ApplicationController
 
     def destroy
         @dish.delete
+        redirect_to dishes_path
     end
 
     private

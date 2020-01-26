@@ -2,13 +2,17 @@
 <%# Name: <%= @dish.name %>
 <%# Cuisine: <%= @dish.cuisine.name %>
 <%# Ingredients: <%= @dish.ingredient link back to cuisine and meal! %>
+<%# <a href="#" class="card-link">Card link</a> %>
 
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title"><%= @dish.name %></h5>
     <h6 class="card-subtitle mb-2 text-muted"><%= @dish.cuisine.name %></h6>
     <p class="card-text"><%= @dish.ingredient %></p>
-    <a href="javascript:history.back()">Go Back</a>
+    <a href="javascript:history.back()">	&hearts; Add to Favorites</a>
   </div>
 </div>
-
+<br>
+<%= button_to "Edit Recipe", edit_dish_path, method: :get, form: {style: 'display:inline-block;'}%> 
+  &nbsp; or &nbsp;
+<%= button_to "Delete Recipe", dish_path, method: :delete, form: {style: 'display:inline-block;'}%>
