@@ -40,8 +40,8 @@ class UsersController < ApplicationController
     end
     
     def destroy
-        if @user == @current_user
-            @user.destroy_all
+        if @user == current_user
+            User.destroy(@user.id)
         end 
         redirect_to logout_path
     end
@@ -57,5 +57,9 @@ class UsersController < ApplicationController
 
     def find_user
         @user = User.find(params[:id])
+    end
+
+    def current_user
+        @current_user ||= User.find(session[:user_id]) if session[:user_id] 
     end
 end
