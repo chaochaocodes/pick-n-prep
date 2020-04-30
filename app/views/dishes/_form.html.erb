@@ -1,6 +1,10 @@
 <%= form_for @dish do |f| %><br>
+
     Name of Dish <br>
     <%= f.text_field :name %><br><br>
+
+    <%= f.label :image %>
+    <%= f.file_field :image%><br><br>
 
     <%= f.label :cuisine %><br>
     <%= f.collection_select :cuisine_id, Cuisine.all, :id, :name %><br><br>
@@ -10,6 +14,9 @@
 
     <label> Ingredients  </label><br>
     <%= f.text_area :ingredient %><br><br>
+
+    <label> Directions  </label><br>
+    <%= f.text_area :direction %><br><br>
 
     <%= f.submit %> 
 <% end %>

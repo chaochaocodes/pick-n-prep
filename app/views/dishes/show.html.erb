@@ -1,14 +1,15 @@
-<h2> Recipe </h2>
 <%# Name: <%= @dish.name %>
 <%# Cuisine: <%= @dish.cuisine.name %>
 <%# Ingredients: <%= @dish.ingredient link back to cuisine and meal! %>
 <%# <a href="#" class="card-link">Card link</a> %>
 
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 35rem;">
   <div class="card-body">
     <h5 class="card-title"><%= @dish.name %></h5>
     <h6 class="card-subtitle mb-2 text-muted"><%= @dish.cuisine.name %></h6>
+    <%= image_tag(@dish.image, style:'width:100%') %><br><br>
     <p class="card-text"><%= @dish.ingredient %></p>
+      <p class="card-text"><%= @dish.direction %></p>
     <a href="javascript:history.back()">	&hearts; Add to Favorites</a>
   </div>
 </div>
