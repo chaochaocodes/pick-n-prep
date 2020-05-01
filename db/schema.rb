@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_24_184236) do
+ActiveRecord::Schema.define(version: 2020_04_30_182151) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -39,17 +39,32 @@ ActiveRecord::Schema.define(version: 2020_01_24_184236) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "dishes", force: :cascade do |t|
+  create_table "directions", force: :cascade do |t|
+    t.string "step"
+    t.integer "recipe_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "ingredients", force: :cascade do |t|
     t.string "name"
-    t.string "ingredient"
-    t.integer "cuisine_id"
-    t.integer "meal_id"
+    t.string "quantity"
+    t.integer "recipe_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "meals", force: :cascade do |t|
     t.string "meal_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.integer "cuisine_id"
+    t.integer "meal_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
