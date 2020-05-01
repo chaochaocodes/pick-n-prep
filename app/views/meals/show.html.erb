@@ -3,8 +3,8 @@
     Featured
   </div>
   <ul class="list-group list-group-flush">
-    <% @dishes.each do |dish| %>
-    <li class="list-group-item"><%= link_to dish.name, dish_path(dish.id) %></li>
+    <% @recipes.each do |recipe| %>
+    <li class="list-group-item"><%= link_to recipe.title, recipe_path(recipe.id) %></li>
     <% end %> 
   </ul>
 </div>
