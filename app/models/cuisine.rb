@@ -1,4 +1,4 @@
 class Cuisine < ApplicationRecord
-    has_many :dishes
-    has_many :meals, through: :dishes
+    has_many :recipes
+    has_many :meals, through: :recipes
 end
