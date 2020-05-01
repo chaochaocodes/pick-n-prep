@@ -1,13 +1,6 @@
 class UsersController < ApplicationController
     before_action :find_user, only: [:show, :edit, :update, :destroy]
-
-    # @user.avatar.attach(params[:avatar]
-    # def upload
-    #     uploaded_file = params[:user][:picture]
-    #     File.open(Rails.root.join('public', 'uploads', uploaded_file.original_filename), 'wb') do |file|
-    #       file.write(uploaded_file.read)
-    #     end
-    # end
+    skip_before_action :require_login, only: [:new, :create]
 
     def new
         @user = User.new
