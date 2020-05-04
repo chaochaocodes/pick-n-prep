@@ -7,7 +7,6 @@ class UsersController < ApplicationController
     end
 
     def show
-        # render :layout => "format"
     end
 
     def create
