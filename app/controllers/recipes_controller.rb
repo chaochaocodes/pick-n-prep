@@ -7,21 +7,16 @@ class RecipesController < ApplicationController
     end
 
     def show
-        render :layout => "format"
     end
 
     def new
         @recipe = Recipe.new
-        @recipe.ingredients.build
-        @recipe.ingredients.build
-        @recipe.ingredients.build
-        @recipe.directions.build
-        @recipe.directions.build
-        @recipe.directions.build
+        # @recipe.ingredients.build
+        # @recipe.directions.build
     end
 
     def create
-        @recipe = Recipe.create(recipe_params)
+        @recipe = Recipe.new(recipe_params) # change from .create 
         if @recipe.save
             redirect_to @recipe, notice: "Recipe created!"
         else
@@ -44,7 +39,7 @@ class RecipesController < ApplicationController
     end
 
     def destroy
-        @recipe.delete
+        @recipe.destroy
         redirect_to recipes_path, notice: "Recipe Deleted."
     end
 
@@ -55,7 +50,7 @@ class RecipesController < ApplicationController
 
     def recipe_params
         params.require(:recipe).permit(:title, :description, :cuisine_id, :meal_id, :image, 
-            ingredients_attributes: [:id,:name, :quantity, :_destroy],
+            ingredients_attributes: [:id, :name, :quantity, :_destroy],
             directions_attributes: [:id, :step, :_destroy]
         )
     end
