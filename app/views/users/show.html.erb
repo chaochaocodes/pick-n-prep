@@ -1,14 +1,38 @@
-<h2> User Profile </h2>
+<h2> Hi, <%= @user.name%> </h2>
+<div class="avatar">
+  <% if @user.avatar.attached? %>
+      <%= image_tag(@user.avatar, style:'width:400px') %><br><br>
+  <% end %>
+</div>
+<%# <%= image_tag (@user.avatar.variant(resize_to_limit: [100, 100]))%><br><br> %>
 
-<%# <%= if @user.avatar.attached? %>
- <%# < image src="<%=(url_for(@user.avatar))%>
-<%# <% end %> 
-
-User Name: <br><%= @user.name%><br><br>
 Upcoming Trips: <br><%= @user.trip%><br><br>
-Dietary Restrictions: <br><%= @user.dietary_restriction%><br><br>
+
+<%# Dietary Restrictions: <br><%= @user.dietary_restriction%>
+<fieldset class="form-group">
+    <legend class="col-form-label pt-0">Dietary Restrictions and Allergens: </legend>
+    <div class="custom-control custom-checkbox">
+      <input class="custom-control-input" type="checkbox" id="exampleCheckbox1" value="option1" required>
+      <label class="custom-control-label" for="exampleCheckbox1">Gluten Free</label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input class="custom-control-input" type="checkbox" id="exampleCheckbox2" value="option1" required>
+      <label class="custom-control-label" for="exampleCheckbox2">Vegetarian</label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input class="custom-control-input" type="checkbox" id="exampleCheckbox3" value="option1" required>
+      <label class="custom-control-label" for="exampleCheckbox3">Vegan</label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input class="custom-control-input" type="checkbox" id="exampleCheckbox4" value="option1" required>
+      <label class="custom-control-label" for="exampleCheckbox4">Nut Allergies</label>
+    </div>
+    <div class="invalid-feedback">Please provide a valid value.</div>
+    <div class="valid-feedback">Looks good!</div>
+    <small class="form-text text-muted">Collection as check boxes example</small>
+</fieldset>
 
 
 <%= button_to "Edit Profile", edit_user_path, method: :get, form: {style: 'display:inline-block;'}%> 
 &nbsp; or &nbsp;
-<%= button_to "Delete Account", user_path(current_user) , method: :delete, form: {style: 'display:inline-block;'}%>
+<%= button_to "Delete Account", user_path(current_user) , method: :delete, form: {style: 'display:inline-block;'}, data: {confirm: "Are you sure?"}%>

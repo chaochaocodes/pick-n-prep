@@ -5,9 +5,10 @@
 <%# <% end %>
 
 <%= form_for @user do |f| %>
+    <br>
+    <%= f.label :avatar, "Upload Profile Photo:" %><br>
+    <%= f.file_field :avatar %><br><br>
 
-    <%# <%= f.label "Upload Profile Photo" %>
-    <%# <%= f.field_field :avatar %>
     Name: <br> <%= f.text_field :name %><br><br>
     Add any upcoming trips: <br>
     <%= f.text_field :trip %><br><br>
