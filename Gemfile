@@ -5,6 +5,11 @@ ruby '2.6.1'
 # bundle bootstrap and jquery
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
+# handle nested forms
+gem 'simple_form'
+gem 'cocoon', '~> 1.2.6'
+# resize uploaded images
+gem 'image_processing'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
