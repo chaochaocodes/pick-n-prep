@@ -13,3 +13,136 @@
  */
 
  @import "bootstrap";
+
+ @mixin box-shadow {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+	box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+}
+
+body {
+	background: rgb(235, 238, 243);
+	margin-bottom: 20px;
+}
+.alert {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	@include box-shadow;
+	background: white;
+	font-weight: bold;
+}
+.navbar {
+	margin-bottom: 10px;
+	@include box-shadow;
+	border: none;
+	.navbar-brand {
+		// text-transform: uppercase;
+		letter-spacing: -1px;
+		font-weight: bold;
+		font-size: 25px;
+		a {
+			color: $red;
+		}
+	}
+}
+.menu-btns {
+		text-align: center;
+}
+.card {
+	margin: 5px;	
+}
+// Recipe Box - Index with photo/dish name link to Recipe
+// .recipe {
+// 	background: white;
+// 	border-radius: 5px;
+// 	margin-bottom: 40px;
+// 	@include box-shadow;
+// 	.image_wrapper {
+// 		max-width: 100%;
+// 		border-radius: 5px 5px 0 0;
+// 		overflow: hidden;
+// 	}
+// 	img {
+// 		width: 100%;
+// 		-webkit-transition: all .3s ease-out;
+// 	  	-moz-transition: all .3s ease-out;
+// 	  	-o-transition: all .3s ease-out;
+//     	transition: all .3s ease-out;
+// 		&:hover {
+// 			transform: scale(1.075);
+// 		}
+// 	}
+// 	h2 {
+// 		padding: 15px 5%;
+// 		margin: 0;
+// 		font-size: 20px;
+// 		font-weight: normal;
+// 		line-height: 1.5;
+// 		a {
+// 			color: $red;
+// 		}
+// 	}
+// }
+
+// #recipe_info {	 ///// Title & Desc ///////////// 
+	// 	h1 {
+		// 		font-size: 36px;
+		// 		font-weight: normal;
+		// 		color: $red;
+		// 	}
+		// 	.description {
+			// 		color: #8A8A8A;
+			// 		font-size: 20px;
+			// 	}
+			// }
+
+// CSS for Recipe: SHOW
+.recipe-image {	
+	max-width: 100%;
+	margin-bottom: 1em;
+	border-radius: 10px;
+	@include box-shadow;
+}
+#ingredients, #directions {
+	@include box-shadow;
+	margin-bottom: 50px;
+	ul, ol {
+		padding-left: 18px;
+		li {
+			padding: 1em 0;
+			border-bottom: 1px solid #EAEAEA;
+		}
+	}
+}
+
+// CSS for Recipe: _FORM
+.ingredients, .directions {
+	@include box-shadow; 
+	margin-bottom: 30px; 
+	background: white;
+	min-height: 360px; 
+	border-radius: 5px;
+	padding: 2em 8%;  
+}
+#errors {
+	color: #005b96;
+	margin-bottom: 20px;
+}
+
+// .form-inline { // space between new +ingredient/step fields
+// 	margin-top: 15px;
+// }
+// .form-input { // nested ingredients/directions field /// 
+// 	width: 65% !important;
+// 	float: left;
+// }
+.form-button { /////////// REMOVE btn //////////////  
+	float: left;
+	width: 30% !important;
+	margin-left: 5%;
+}
+.btn {
+	margin-top: 15px;
+}
