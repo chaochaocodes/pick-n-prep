@@ -1,6 +1,8 @@
-<div class='form-inline' id='clearfix'>
-  <div class='nested-fields'>
-    <%= f.input :step, input_html: { class: 'form-input form-control' }%>
-    <%= link_to_remove_association "Remove Step", f, class: "btn btn-outline-dark"%>
+<div class='form-inline'>
+  <div class='clearfix'>
+	  <div class='nested-fields'>
+      <%= f.input :step, input_html: { class: 'form-input form-control' }%>
+      <%= link_to_remove_association "Remove", f, class: "btn btn-outline-dark"%>
+    </div>
   </div>
 </div>
