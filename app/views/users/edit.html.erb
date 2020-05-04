@@ -1,9 +1,5 @@
 <h2> Edit Profile </h2>
 
-<%# <%= form_with model: @user do |f| %>
-  <%# <%= f.file_field :picture %>
-<%# <% end %>
-
 <%= form_for @user do |f| %>
     <br>
     <%= f.label :avatar, "Upload Profile Photo:" %><br>
@@ -17,3 +13,5 @@
 
     <%= f.submit "Update Profile"%>
 <% end %>
+<br>
+<%= link_to "Back", user_path(current_user), method: :get %>
