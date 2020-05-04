@@ -1,56 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-  
-    <%# <style>
-    body {
-      background: ;
-    }
-    .content {
-      max-width: 960px;
-      margin: auto;
-      text-align: center;
-      vertical-align: middle;
-    }
-    </style> %>
-
-    <title>PickNPrep</title>
+    <title> MealPik. </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %> 
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-      
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="/landing">MealPik. </a>
-    </nav><br>
-
-    <div class="container">
-      <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col">
-          <% if current_user %>
-          <%= link_to "Profile", user_path(current_user), method: :get, class: 'btn btn-dark'%>
-          <% end %>
-          <%= link_to "Find by Meal", meals_path, method: :get, class: "btn btn-info" %>
-          <%= link_to "Cuisines", cuisines_path, method: :get, class: "btn btn-info" %>
-          <%= link_to "Recipes", dishes_path, method: :get, class: "btn btn-info" %>
-          <% if logged_in? %>
-            <%= link_to "Add a Recipe", new_dish_path, method: :get, class: "btn btn-light" %>
-            <%= link_to "Logout", logout_path, method: :get, class: "btn btn-secondary" %> 
-          <% end %><p>
-          <div class="col-md-3"></div>
-      </div> 
-    </div>
   </head>
 
   <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">MealPik. </a>
+    </nav>
+
     <div class="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: "alert" %>
+      <% end %>
+
       <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-          <%= yield %>
-        </div>
+          <div class="col"></div>
+          <div class="col-md-auto">
+            <div class="menu-btns"> 
+
+            <%# <% if current_user %>
+            <% if logged_in? %> 
+              <%= link_to "Profile", user_path(current_user), method: :get, class: 'btn btn-dark'%>
+            <% end %>
+            <%= link_to "Find by Meal", meals_path, method: :get, class: "btn btn-info" %>
+            <%= link_to "Cuisines", cuisines_path, method: :get, class: "btn btn-info" %>
+            <%= link_to "Recipes", recipes_path, method: :get, class: "btn btn-info" %>
+            <% if logged_in? %>
+              <%= link_to "Add a Recipe", new_recipe_path, method: :get, class: "btn btn-light" %>
+              <%= link_to "Logout", logout_path, method: :get, class: "btn btn-secondary" %> 
+            <% end %><p>
+          
+            </div> 
+
+            <%= yield %>  
+            
+          </div>
+          <div class="col"></div>
+      </div> 
     </div>
   </body>
 </html>
