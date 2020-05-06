@@ -5,15 +5,15 @@
 
 <div class="card" style="width: 580px;">
   <div class="card-body">
-    <h5 class="card-title"><%= @recipe.title %></h5>
-    <h6 class="card-subtitle mb-2 text-muted"><%= @recipe.cuisine.name %></h6>
+    <h4 class="card-title"><%= @recipe.title %></h4>
+    <h5 class="card-subtitle mb-2 text-muted"><%= @recipe.cuisine.name %></h5>
     <p class="card-text"><%= @recipe.description %></p>
 
     <% if @recipe.image.attached? %>
       <%= image_tag(@recipe.image, class: "recipe-image") %>
     <% end %>
 
-    <div id="ingredients">
+    <div class="ingredients">
       <h5> Ingredients: </h5>
       <ul> 
         <% @recipe.ingredients.each do |ingredient| %>
@@ -21,7 +21,7 @@
         <% end %>
       </ul>
     </div>
-    <div id="directions">
+    <div class="directions">
       <h5> Directions: </h5>
       <ol>
         <% @recipe.directions.each do |direction| %>
@@ -34,6 +34,6 @@
   </div>
 </div>
 <br>
-<%= button_to "Back", recipe_path(@recipe), form: {style: 'display:inline-block;'}%>
+<%= button_to "Back", recipes_path, method: :get, form: {style: 'display:inline-block;'}%>
 <%= button_to "Edit", edit_recipe_path, method: :get, form: {style: 'display:inline-block;'}%>
 <%= button_to "Delete", recipe_path, method: :delete, form: {style: 'display:inline-block;'}, data: {confirm: "Are you sure?"}%>
