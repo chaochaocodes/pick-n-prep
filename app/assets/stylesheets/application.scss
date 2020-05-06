@@ -105,8 +105,7 @@ body {
 	border-radius: 10px;
 	@include box-shadow;
 }
-#ingredients, #directions {
-	@include box-shadow;
+.ingredients, .directions {
 	margin-bottom: 50px;
 	ul, ol {
 		padding-left: 18px;
@@ -118,7 +117,7 @@ body {
 }
 
 // CSS for Recipe: _FORM
-.ingredients, .directions {
+#ingredients, #directions {
 	@include box-shadow; 
 	margin-bottom: 30px; 
 	background: white;
