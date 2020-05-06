@@ -2,8 +2,12 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+
+//cocoon dependencies
+//= require jquery
 //= require jquery_ujs
 //= require cocoon
+//= require turbolinks
 
 // This file is automatically compiled by Webpack, along with any other files
 // present in this directory. You're encouraged to place your actual application logic in
