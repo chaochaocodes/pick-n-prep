@@ -13,5 +13,5 @@ class User < ApplicationRecord
     #     [GF, V, VEG, NUT, FRUIT]
     # end
 
-    ALLERGEN = ['GF', 'V', 'VEG', 'NUT', 'FRUIT'].freeze
+    ALLERGEN = ['Vegetarian', 'Vegan', 'Gluten Free', 'Nut Allergies', 'Fruit Allergies'].freeze
 end
