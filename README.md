@@ -1,40 +1,46 @@
 # README
 
-MealPik & Prep is here to help you organize your recipes 
-for a weekend away ahead of time.  This way, you can spend your
-precious time on the slopes skiing, hiking those mountains 
-or chillin beachside. 
+<h1> MealPik & Prep </h1>
+
+MealPik & Prep is here to help you select easy crowd-pleasing recipes
+for those weekend getaways at the cabin.  This way, you can spend your 
+precious time on the slopes skiing, hiking those mountains or relaxing beachside. 
 
 
-Feature Summary:
+<h3>Features Summary:</h3>
 
-- View recipe collections by cuisine and meal type
-- In your account, add your own recipes to the collection 
-- Customize your recipes
-- Create trips in your profile 
-- Favorite recipes will be added to your profile page
-- Add favorite recipes to specific weekend trips 
+- View recipe collections by cuisine or meal
+- Customize any recipe in the collection
+- Create and Add your own recipe into the collection
+- Add upcoming trips in your profile
+- Check-off known allergens of trip member(s) on a trip
+<!-- - Favorite recipes will be added to your profile page -->
+<!-- - Add favorite recipes to specific weekend trips  -->
 
 
-Steps necessary to get the application up and running.
+<h3> Application Setup: </h3>
 
-* Configuration
-    Run 'bundle install' to install Gemfile
-    Run 'rails db:migrate'
-* Database creation
-    Run 'rails db:seed'
-* Database initialization 
-    Go to localhost:3000/landing
+Configuration 
+* Run 'bundle install' to install Gemfile
+* Run 'rails db:migrate'
 
+Database Creation
+* Run 'rails db:seed'
+
+Database Initialization
+* Start server by running 'rails server'
+
+Tech Stack: 
+* Ruby on Rails v 6.0.2.2 utilizing full CRUD and MVC pattern
 
 USER STORIES:
-o	As a user, I want to create and login to an account (Create)
-o	As a user, I want to view my profile. (Read)
-o	As a user, I want to be able to edit my profile. (Update)
-o	As a user, I want to be able to logout of my account. ('Delete')
-o	As a user, I want to be able to delete my account. (Delete)
-o	As a user, I want to be able to create a dish (Create)
-o	As a user, I want to see view all meals by category.  (Read)
-o	As a user, I want to see view all cuisines by category.  (Read)
-o	As a user, I want to see view all recipes.  (Read)
+- As a user, I want to create and login to an account (Create)
+- As a user, I want to view my profile. (Read)
+- As a user, I want to be able to edit my profile. (Update)
+- As a user, I want to be able to logout of my account. ('Delete')
+- As a user, I want to be able to delete my account. (Delete)
+- As a user, I want to be able to create a dish (Create)
+- As a user, I want to see view all meals by category.  (Read)
+- As a user, I want to see view all cuisines by category.  (Read)
+- As a user, I want to see view all recipes.  (Read)
 
