@@ -4,34 +4,14 @@
       <%= image_tag(@user.avatar, style:'width:400px') %><br><br>
   <% end %>
 </div>
-<%# <%= image_tag (@user.avatar.variant(resize_to_limit: [100, 100]))%><br><br> %>
+<%# <%= image_tag (@user.avatar.variant(resize_to_limit: [100, 100]))%><br><br>
 
 Upcoming Trips: <br><%= @user.trip%><br><br>
 
-<%# Dietary Restrictions: <br><%= @user.dietary_restriction%>
-<fieldset class="form-group">
-    <legend class="col-form-label pt-0">Dietary Restrictions and Allergens: </legend>
-    <div class="custom-control custom-checkbox">
-      <input class="custom-control-input" type="checkbox" id="exampleCheckbox1" value="option1" required>
-      <label class="custom-control-label" for="exampleCheckbox1">Gluten Free</label>
-    </div>
-    <div class="custom-control custom-checkbox">
-      <input class="custom-control-input" type="checkbox" id="exampleCheckbox2" value="option1" required>
-      <label class="custom-control-label" for="exampleCheckbox2">Vegetarian</label>
-    </div>
-    <div class="custom-control custom-checkbox">
-      <input class="custom-control-input" type="checkbox" id="exampleCheckbox3" value="option1" required>
-      <label class="custom-control-label" for="exampleCheckbox3">Vegan</label>
-    </div>
-    <div class="custom-control custom-checkbox">
-      <input class="custom-control-input" type="checkbox" id="exampleCheckbox4" value="option1" required>
-      <label class="custom-control-label" for="exampleCheckbox4">Nut Allergies</label>
-    </div>
-    <div class="invalid-feedback">Please provide a valid value.</div>
-    <div class="valid-feedback">Looks good!</div>
-    <small class="form-text text-muted">Collection as check boxes example</small>
-</fieldset>
-
+"Dietary Restrictions and Allergens:"
+<%= simple_form_for @user do |f| %>
+<%= f.input :dietary_restriction, as: :check_boxes, collection: User::ALLERGEN %>
+<% end %>
 
 <%= button_to "Edit Profile", edit_user_path, method: :get, form: {style: 'display:inline-block;'}%> 
 &nbsp; or &nbsp;
