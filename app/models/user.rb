@@ -8,4 +8,10 @@ class User < ApplicationRecord
     validates :name, presence: true
     # validates :password, presence: true
     # # validates :password, uniqueness: true
+
+    # def self.allergens
+    #     [GF, V, VEG, NUT, FRUIT]
+    # end
+
+    ALLERGEN = ['GF', 'V', 'VEG', 'NUT', 'FRUIT'].freeze
 end
