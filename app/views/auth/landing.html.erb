@@ -8,7 +8,7 @@
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
  
   <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="/landing">Welcome!</a>
+    <a class="navbar-brand" href="/">Welcome!</a>
   </nav>
 
 <%# <style>
@@ -43,8 +43,9 @@
     <p class="card-text py-2">Can't decide what to cook? &nbsp; Can't keep track of your tried and true recipes? &nbsp; This is the place for you!
     <br>Create an account to personalize your experience or view recipes without an account today. </p>
     <!-- Button -->
+    <% if !logged_in? %> 
     <%= link_to "Create Profile", signup_path, method: :get, class: "btn btn-info" %>
-    &nbsp; or &nbsp;
+    <% end %>
     <%= link_to "View Recipes", meals_path, method: :get, class: "btn btn-info" %>
   </div>
 </div>
