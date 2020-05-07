@@ -1,13 +1,9 @@
 <h2> Create an Account </h2>
 
-<%= form_for @user do |f| %><br>
-    <%= f.label :name %><br>
-    <%= f.text_field :name, class: "new-todo" , placeholder: "Enter your name here." %><br><br>
-    <%= f.label :password %><br>
-    <%= f.password_field :password, class: "new-todo", placeholder: "Choose a Password." %><br><br>
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation, class: "new-todo", placeholder: "Confirm Password." %><br><br>
+<%= simple_form_for @user do |f| %><br>
+    <%= f.input :name, input_html: { class: 'form-control' }, placeholder: "Enter your name here." %>
+    <%= f.input :password, input_html: { class: 'form-control' }, placeholder: "Choose a Password." %>
+    <%= f.input :password_confirmation, input_html: { class: 'form-control' }, placeholder: "Confirm Password." %>
     <%= f.submit %> &nbsp; or &nbsp;
 <% end %>
     <%= button_to "Go to Login", login_path, method: :get%>
-
