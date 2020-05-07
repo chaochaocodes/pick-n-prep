@@ -6,7 +6,8 @@ class User < ApplicationRecord
     has_many :meals, through: :users_meals
 
     validates :name, presence: true
-    # validates :password, presence: true
+    validates :password, presence: true
+    validates :password_confirmation, presence: true
     # # validates :password, uniqueness: true
 
     # def self.allergens
