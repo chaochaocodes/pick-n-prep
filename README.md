@@ -1,13 +1,13 @@
 # README
 
-<h1> MealPik & Prep </h1>
+# MealPik & Prep
 
 MealPik & Prep is here to help you select easy crowd-pleasing recipes
 for those weekend getaways at the cabin.  This way, you can spend your 
 precious time on the slopes skiing, hiking those mountains or relaxing beachside. 
 
-
-<h3>Features Summary:</h3>
+Features Summary
+------
 
 - View recipe collections by cuisine or meal
 - Customize any recipe in the collection
@@ -18,22 +18,26 @@ precious time on the slopes skiing, hiking those mountains or relaxing beachside
 <!-- - Add favorite recipes to specific weekend trips  -->
 
 
-<h3> Application Setup: </h3>
+Application Setup
+------
 
-Configuration 
+Configuration:
 * Run 'bundle install' to install Gemfile
 * Run 'rails db:migrate'
 
-Database Creation
+Database Creation:
 * Run 'rails db:seed'
 
-Database Initialization
+Database Initialization:
 * Start server by running 'rails server'
 
 Tech Stack: 
 * Ruby on Rails v 6.0.2.2 utilizing full CRUD and MVC pattern
 
-USER STORIES:
+
+User Stories
+------
+
 - As a user, I want to create and login to an account (Create)
 - As a user, I want to view my profile. (Read)
 - As a user, I want to be able to edit my profile. (Update)
