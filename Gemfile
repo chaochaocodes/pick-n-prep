@@ -7,10 +7,10 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 # handle nested forms
 gem 'simple_form'
-gem 'cocoon', '~> 1.2.6'
+gem 'cocoon'
 
-# Bundle Rails 5 instead of 6.0.2.1 for compatibility with Cocoon, github: 'rails/rails'
-gem 'rails', '~> 5.2.4.2'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'	gem 'rails', '~> 5.2.4.2'
+gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
