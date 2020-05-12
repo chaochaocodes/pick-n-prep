@@ -15,7 +15,7 @@ class AuthController < ApplicationController
             session[:user_id] = user.id.to_s
             redirect_to '/meals'
         else 
-            flash[:message] = "User name or password is incorrect. Try again."
+            flash[:message] = "User name or password is incorrect."
             render :login
         end
     end

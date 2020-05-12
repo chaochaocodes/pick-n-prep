@@ -4,6 +4,7 @@ class RecipesController < ApplicationController
 
     def index
         @recipes = Recipe.all
+        # @recipes = Recipe.all.order("created_at DESC")
     end
 
     def show
@@ -11,10 +12,16 @@ class RecipesController < ApplicationController
 
     def new
         @recipe = Recipe.new
-        # @recipe.ingredients.build
-        # @recipe.directions.build
+        @recipe.ingredients.build
+        @recipe.ingredients.build
+        @recipe.ingredients.build
+        @recipe.directions.build
+        @recipe.directions.build
+        @recipe.directions.build
+
     end
 
+    # redirect_to recipe_path(@recipe) # /users/#{@user.id}
     def create
         @recipe = Recipe.new(recipe_params) # change from .create 
         if @recipe.save

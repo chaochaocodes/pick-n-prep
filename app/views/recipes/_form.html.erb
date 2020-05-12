@@ -23,32 +23,20 @@
     <%= f.collection_select :meal_id, Meal.all, :id, :meal_type, :prompt => true %><br><br>
   </div>
 
-    <div>
-      <h3>Ingredients:</h3>
-      <div id="ingredients">
-        <%= f.simple_fields_for :ingredients do |ingredient| %>
-          <%= render 'ingredient_fields', f: ingredient %>
-        <% end %>
+  <%= f.label :ingredient, "Ingredients:" %><br>
+  <%= f.simple_fields_for :ingredients do |item| %>
+      <%= item.input :quantity %>
+      <%= item.input :name %>
+  <% end %>
+  <br>
+  <br>
+  <%= f.label :direction, "Directions:" %><br>
+  <%= f.simple_fields_for :directions do |item| %>
+      <%= item.input :step %>
+  <% end %>
 
-        <div class="links">
-          <%= link_to_add_association 'add ingredient', f, :ingredients, class: "btn btn-outline-dark" %>
-        </div>
-      </div>
-    </div>
-
-    <div>  
-      <h3> Directions: </h3>
-      <div id="directions">
-        <%= f.simple_fields_for :directions do |direction| %>
-          <%= render 'direction_fields', f: direction %>
-        <% end %>
-        <div class='links'>
-          <%= link_to_add_association 'Add Step', f, :directions, class: "btn btn-outline-dark" %>	
-        </div>
-      </div>
-    </div> 
-
-    <%= f.button :submit, class: "btn btn-info"  %>
+  <%= f.button :submit, class: "btn btn-info"  %>
 <% end %>
 
 <%= button_to "Back", recipes_path(@recipe), method: :get, class: "btn btn-outline-dark" %>
+
