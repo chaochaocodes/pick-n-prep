@@ -18,7 +18,7 @@ class UsersController < ApplicationController
             flash[:message] = nil
             redirect_to login_path
         else
-            flash[:message] = "Passwords do not Match!" # @user.full_messages
+            flash[:message] = "Please fix the errors below." # @user.full_messages
             render :new
         end
     end

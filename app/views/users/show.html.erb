@@ -7,11 +7,12 @@
 <%# <%= image_tag (@user.avatar.variant(resize_to_limit: [100, 100]))%><br><br>
 
 Upcoming Trips: <br><%= @user.trip%><br><br>
+Dietary Restrictions and Allergens:: <br><%= @user.dietary_restriction%><br><br>
 
-"Dietary Restrictions and Allergens:"
-<%= simple_form_for @user do |f| %>
-<%= f.input :dietary_restriction, as: :check_boxes, collection: User::ALLERGEN %>
-<% end %>
+<%# "Dietary Restrictions and Allergens:" %>
+<%# <%= simple_form_for @user do |f| %>
+<%# <%= f.input :dietary_restriction, as: :check_boxes, collection: User::ALLERGEN %>
+<%# <% end %>
 
 <%= button_to "Edit Profile", edit_user_path, method: :get, form: {style: 'display:inline-block;'}%> 
 &nbsp; or &nbsp;
