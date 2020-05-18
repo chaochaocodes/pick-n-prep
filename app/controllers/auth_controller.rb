@@ -1,8 +1,10 @@
 class AuthController < ApplicationController
-    skip_before_action :require_login
 
     def login #new 
-        
+        # if session[:user_id] != nil
+        #     user = User.find(session[:user_id])
+        #     redirect_to signup_path
+        # end
     end
 
     def landing #show
@@ -12,11 +14,12 @@ class AuthController < ApplicationController
     def authenticate #create
         user = User.find_by(name: params[:auth][:name])
         if user && user.authenticate(params[:auth][:password])
-            session[:user_id] = user.id.to_s
+            session[:user_id] = user.id
             redirect_to '/meals'
         else 
             flash[:message] = "User name or password is incorrect."
             render :login
+            flash.clear
         end
     end
 
