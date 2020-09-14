@@ -1,17 +1,17 @@
-# README
-
-# MealPik & Prep
+# MealPik
 
 MealPik & Prep is here to help you select easy crowd-pleasing recipes
 for those weekend getaways at the cabin.  This way, you can spend your 
 precious time on the slopes skiing, hiking those mountains or relaxing beachside. 
+
+Flatiron School, Software Engineering Immersive - Module 2 Project
 
 Features Summary
 ------
 
 - View recipe collections by cuisine or meal
 - Customize any recipe in the collection
-- Create and Add your own recipe into the collection
+- Create and Add your own recipe to the collection
 - Add upcoming trips in your profile
 - Check-off known allergens of trip member(s) on a trip
 <!-- - Favorite recipes will be added to your profile page -->
@@ -47,4 +47,8 @@ User Stories
 - As a user, I want to see view all meals by category.  (Read)
 - As a user, I want to see view all cuisines by category.  (Read)
 - As a user, I want to see view all recipes.  (Read)
+
+##
+
+![Image of Cuisines](https://github.com/chaochaocodes/pick-n-prep/blob/master/screenshots/02_mealpik.png)
 
