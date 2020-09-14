@@ -1,25 +1,24 @@
 # MealPik
 
-MealPik & Prep is here to help you select easy crowd-pleasing recipes
-for those weekend getaways at the cabin.  This way, you can spend your 
+[MealPik](https://mealpik.herokuapp.com) will help you select easy crowd-pleasing recipes
+for those weekend getaways at the cabin.  This way you can spend your 
 precious time on the slopes skiing, hiking those mountains or relaxing beachside. 
 
 Flatiron School, Software Engineering Immersive - Module 2 Project
 
-Features Summary
-------
+### Features Summary
 
-- View recipe collections by cuisine or meal
+- User can create an account, password encryption with bcrypt
+- View recipe collections by cuisine or meal type
 - Customize any recipe in the collection
 - Create and Add your own recipe to the collection
 - Add upcoming trips in your profile
-- Check-off known allergens of trip member(s) on a trip
+- Check off dietary restrictions/food allergies in your profile
 <!-- - Favorite recipes will be added to your profile page -->
 <!-- - Add favorite recipes to specific weekend trips  -->
 
 
-Application Setup
-------
+### Application Setup
 
 Configuration:
 * Run 'bundle install' to install Gemfile
@@ -31,24 +30,16 @@ Database Creation:
 Database Initialization:
 * Start server by running 'rails server'
 
-Tech Stack: 
+### Tech Stack: 
 * Ruby on Rails v 6.0.2.2 utilizing full CRUD and MVC pattern
+* SQLite3 database
+* HTML / CSS
 
+### Home Page
 
-User Stories
-------
+![Image of Home Page](https://github.com/chaochaocodes/pick-n-prep/blob/master/screenshots/01_mealpik.png)
 
-- As a user, I want to create and login to an account (Create)
-- As a user, I want to view my profile. (Read)
-- As a user, I want to be able to edit my profile. (Update)
-- As a user, I want to be able to logout of my account. ('Delete')
-- As a user, I want to be able to delete my account. (Delete)
-- As a user, I want to be able to create a dish (Create)
-- As a user, I want to see view all meals by category.  (Read)
-- As a user, I want to see view all cuisines by category.  (Read)
-- As a user, I want to see view all recipes.  (Read)
-
-##
+### View Recipe by Cuisine
 
 ![Image of Cuisines](https://github.com/chaochaocodes/pick-n-prep/blob/master/screenshots/02_mealpik.png)
 
